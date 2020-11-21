@@ -1,3 +1,86 @@
+#include<stdio.h>
+/*int main () 
+{
+	int a,b,i,n;
+	scanf("%d%d",&a,&b);
+		for(i=a;i>=1;i--)
+	   	{   
+		if(a%i==0&&b%i==0)
+		{
+			printf("%d\n",i);
+			break;
+		} 
+		} 
+     n=a*b/i;
+     printf("%d\n",n);
+
+	     return 0;
+ }*/
+ 
+ 
+ 
+ 
+ 
+ /*int main()
+ {
+ 	double n,i,s,sum,p;
+ 	scanf("%lf",&n);
+ 	sum=1;
+ 	p=0;
+ 	for(i=1;i<=n;i++)
+ 	{for(s=i;s>=1;s--)
+ 	sum=sum*s;
+ 	p=p+sum;
+ 	sum=1;
+	 }
+	 n=p;
+	 printf("%.2lf\n",n);
+	 return 0;
+ }*/
+ 
+ 
+ 
+ /*int main()
+ {
+ 	int n,i,s,c,j;
+ 	scanf("%d",&n);
+ 	s=0;
+ 	j=n;
+ 	for(;j>100;j--)
+ 	{for(i=2;i<j;i++)
+	 if(j%i==0){
+		 s=s+1;
+		  break;
+	 }
+}
+ c=n-100-s;
+printf("%d\n",c);
+	 return 0;
+ }*/
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ /*int main()
+ {
+ 	int n,i,sum;
+ 	scanf("%d",&n);
+ 	sum=0;
+ 	for(i=1;i<=n;i++)
+ 	{if(i%7==0)sum=sum+i;
+	 }
+	 printf("%d\n",sum);
+	 return 0;
+ }*/
+
+
+
+
 /*#include<stdio.h>
 int main()
 {
@@ -17,6 +100,12 @@ int main()
 	printf("%d\n",sum);
 return 0;
  }*/
+ 
+ 
+ 
+ 
+ 
+ 
  /*#include<stdio.h>
  int main()
  {
@@ -33,6 +122,11 @@ return 0;
 	 }
 	 return 0;
  }*/
+ 
+ 
+ 
+ 
+ 
 /* #include<stdio.h>
  int main()
  {
@@ -49,6 +143,11 @@ return 0;
  }
  return 0;
 }*/
+
+
+
+
+
 /*#include<stdio.h>
 int main()
 {
@@ -66,6 +165,12 @@ int main()
 	printf("%.2lf\n",sum);
 	return 0;
 }*/
+
+
+
+
+
+
 /*#include<stdio.h>
 int main()
 {
@@ -78,6 +183,13 @@ int main()
 	printf("%.2lf\n",y);
 	return 0;
 }*/
+
+
+
+
+
+
+
 /* #include<stdio.h>
  int main()
  {
@@ -93,4 +205,24 @@ int main()
 	 printf("%.2lf\n",s);
 	 return 0;
  }*/
+ 
+ int main()
+ {
+ 	int i,a[10],max,m;
+ 	for(i=0;i<=9;i++)
+ 	scanf("%d",&a[i]);
+ 	for(i=0;i<=8;i++)
+ 	{
+	 
+	 if(a[i+1]>a[i])
+	 {
+	 m=a[i+1];
+	 a[i+1]=a[i];
+	 a[i]=m;
+     }
+     max=a[i];
+ }
+ printf("%d\n",max);
+ return 0;
+}
 
