@@ -3350,6 +3350,212 @@ c:\windows\php.ini          // php 配置信息
 
 
   
+    <article id="post-小迪" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2021/09/15/%E5%B0%8F%E8%BF%AA/" class="article-date">
+      <time datetime="2021-09-15T13:27:13.000Z" itemprop="datePublished">2021-09-15</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/09/15/%E5%B0%8F%E8%BF%AA/">小迪</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <details>
+本地HOSTS与DNS重定向
+
+<p>如果在hosts中加的ip与其他重复，即重定向  </p>
+<p>则DNS先找hosts中的，有没有域名对应的ip地址</p>
+<p>如果没有再去互联网的</p>
+<p>web的组成架构模型</p>
+<p>网站源码：分脚本类型，分应用方向</p>
+<p>操作系统：windows，linux</p>
+<p>中间件（搭建平台）：apache  iis   nginx</p>
+<p>数据库: mysql  oracle    sybase   access</p>
+<p>客户端包括：移动端和pc端</p>
+<p>移动端：一般指的手机</p>
+<p>pc端：一般指的电脑</p>
+<p>HTTP响应码：</p>
+<p>1xx：信息，请求收到，继续处理</p>
+<p>2xx：成功，行为成功地接受，理解和采纳</p>
+<p>3xx：重定向，为了完成请求，必须进一步执行的动作</p>
+<p>4xx：客户端错误</p>
+<p>5xx：服务器错误</p>
+<p>200 存在文件</p>
+<p>403  存在文件夹</p>
+<p>3xx  均可能存在</p>
+<p>404   不存在文件及文件夹</p>
+<p>500   均可能存在</p>
+<p>POST方式发送数据时</p>
+<p>数据(请求体)要放在最下面</p>
+<p>用ip扫描网站与用域名扫描网站是不一样的</p>
+<p>ip扫描网站更全一点，ip扫描的目录在域名的上一级</p>
+<p>为什么要配置环境变量</p>
+<p><strong>用户变量</strong>是指我们当前登入这台电脑的用户，比如管理员用户，普通用户。在里面配置的环境变量，只对这个用户有效，一旦用户进行了更换，这环境变量将改为新登录用户的环境变量。<br> <strong>系统变量</strong>是指这这台电脑的配置的环境变量，对所有用户都生效，不管你换哪个用户，都是生效的。</p>
+<p>配置环境变量可以让我们在任何地方打开例如：在cmd中c盘下，也是可以打开的</p>
+<p>为了方便打开，如果不配置环境变量，我们每次打开.exe应用文件都需要找到它，然后打开，这样很麻烦，所以我们可以通过配置环境变量来快速打开</p>
+<p>有些网站在搭建时，为了美观和简洁，会用网上的cms来搭建网站，而这些cms并不都是安全的，有的是存在漏洞的，我们可以在网上找相应源码，扫描来确定其漏洞（cms识别），来攻击它或者（getshell）</p>
+<p>注：这种方法主要可以用来查找违法网站</p>
+<p>框架（模块）：把一些常用的功能写出来，不用再自己打一遍</p>
+<p>如果写代码时，要用到相关功能，可以应用相关框架（模块）</p>
+<p>如果是框架开发的话，需要寻找的是框架里的漏洞，而不是找代码</p>
+<p>cms源码下载地址：菜鸟源码，闲鱼</p>
+<p>原理：如果知道一些cms中的文件路径，然后与其md5值进行对比，如果相同，则返回对应的cms</p>
+<p>cms识别：人工，工具，平台    </p>
+<p>工具：thinkphp_getshell</p>
+<p>识别操作系统常见的几种方法：</p>
+<p>1.如果有网站，可以根据网站来判断</p>
+<p>windows操作系统对大小写不敏感，linux操作系统对大小写敏感，</p>
+<p>eg:<a target="_blank" rel="noopener" href="http://www.xiaodi8.com/index.php">www.xiaodi8.com/index.php</a></p>
+<p>可以改为<a target="_blank" rel="noopener" href="http://www.xiaodi8.com/index.phP">www.xiaodi8.com/index.phP</a>     如果依旧回显正常，则基本可以判定为windows操作系统，如果页面回显不正常，则是Linux</p>
+<p>2.可以根据TTL值来判断（不建议）</p>
+<p>3.Nmap扫描</p>
+<p>nmap -o url</p>
+<p>语言与常见的数据库组合</p>
+<p>ASP+Access</p>
+<p>php+mysql</p>
+<p>aspx+mssql</p>
+<p>jsp+mssql,oracle</p>
+<p>python+mongodb</p>
+<p>2.端口扫描，数据库一般都会有一个默认端口</p>
+<p>md5编码是不可逆的，网上的md5解码是采用枚举的方法来解码的，即：把一些比较常见的字符的编码存起来，当要解码时，用保存起来的编码与其匹配，若一样，则将字符返回</p>
+<p>base32：    只有字母大写</p>
+<p><strong>目前常见的CDN绕过技术</strong></p>
+<p>子域名查询</p>
+<p>邮件服务查询</p>
+<p>国外地址请求</p>
+<p>遗留文件，扫描全网</p>
+<p>黑暗引擎搜索特定文件</p>
+<p>黑暗引擎网站：shodan.io,zoomeye.org,fofa.so</p>
+<p>dns历史记录，以量打量</p>
+<p><a target="_blank" rel="noopener" href="http://www.baidu.com/">www.baidu.com</a> 与 baidu.com是不一样的，虽然最后显示的页面一样，这个与你设置的网站解析有关</p>
+<p>扫全网工具：fuckcdn,w8fuckcdn,zmap</p>
+<p>攻击网站的步骤：</p>
+<p>先确定有没有开启cdn——&gt;</p>
+<p>站点搭建分析</p>
+<p>搭建习惯–目录型站点</p>
+<p>搭建习惯–端口类站点</p>
+<p>搭建习惯–子域名站点</p>
+<p>搭建习惯–类似域名站点</p>
+<p>搭建习惯–旁注(同一服务器，不同站点)，c段(同网段    不同服务器，不同站点)站点</p>
+<p>搭建习惯–搭建软件特征站点</p>
+<p>waf检查工具：wafw00f      kali自带</p>
+<p>有waf保护的，在消息头中有X-Powered-By:WAF,但不是每个有waf的都有</p>
+<p>高危漏洞：sql注入，文件上传，文件包含，未授权访问，命令执行，代码执行</p>
+<p>中危漏洞：反序列化，逻辑安全</p>
+<p>低位漏洞：xss跨站，目录遍历，文件读取</p>
+<p>burp抓包时，如果需要在url处加语句，要把空格换成+(加号)，防止出错</p>
+<h2 id="文件上传"><a href="#文件上传" class="headerlink" title="文件上传"></a>文件上传</h2><p><strong>前端验证</strong></p>
+<p>在html或者js中进行过滤，或者成为浏览器过滤</p>
+<p>如果文件夹名为imge.asp/qq.php  则qq.php文件将会被当做asp解析</p>
+<p>如果文件名为image.asp;.jpg或xxx.asp;xxx.jpg  则会被当做asp解析</p>
+<p>注：根据不同的操作系统来确定</p>
+<p>上传参数名解析：</p>
+<p>Content-Disposition:一般可更改</p>
+<p>name:表单参数值，不能更改</p>
+<p>filename:文件名，可以更改</p>
+<p>Contont-Type:文件MIME，视情况更改</p>
+<p>绕过方法：</p>
+<p>1.数据溢出：垃圾数据溢出，在filename或者name（垃圾数据与name之间要用;分号分开）前面加上大量垃圾数据来绕过</p>
+<p><img src="C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20210522210535945.png" alt="image-20210522210535945"></p>
+<p>2.符号变异：burp抓包，可以看到参数是以键值对的形式显示出来的，可以对值两边的引号做想法，使两边不闭合来绕过，或者将要上传的东西写在引号的外面</p>
+<p>eg:filename=”x”x.php</p>
+<p>3.数据重复：eg:filename=’x.jpg’;filename=’x.jpg’;filename=’x.jpg’;filename=’x.jpg’;filename=’x.jpg’;filename=’x.jpg’;filename=’x.jpg’;filename=’x.jpg’;filename=’x.jpg’;filename=’x.jpg’;filename=’x.jpg’;filename=’x.jpg’;filename=’x.jpg’;filename=’x.jpg’;……..;filename=’x.php’</p>
+<p>或者:将所有参数都再放在filename的值中eg：file=”Content-Disposition:……;X.php”</p>
+<p>有时斜杠也可以截断，代替;分号</p>
+<p>fuzz模糊测试</p>
+<p>注：具体还要看WAF的规则</p>
+<p>cookie session</p>
+<p>用户凭据：通过凭据可以判断对方身份信息</p>
+<p>cookie 存储本地  存活时间较长  小中型</p>
+<p>session  会话  存储服务器  存活时间较短  大型</p>
+<h2 id="文件下载"><a href="#文件下载" class="headerlink" title="文件下载"></a>文件下载</h2><p>一般在url里出现参数名=值(例如：filename=help.php的形式),访问之后没有下载文件，可以将参数写到POST里请求试一试</p>
+<p>Javeweb里有一个配置文件WEB-INF/web.xml</p>
+<p>xss</p>
+<p>绕过httponly</p>
+<p>浏览器未保帐号密码，需要xss产生登录地址，利用表单劫持</p>
+<p>浏览器保存帐号密码，产生在后台的xsss，存储型xss如留言等</p>
+<p>实体化绕过</p>
+<p>思路：只要不出现&lt;&gt;就行</p>
+<p>onclick，onmouseover</p>
+<p>超链接绕过，大小写绕过，循环过滤，编码绕过，请求头中伪造绕过，例如在Referer中写入js脚本</p>
+<p>防御：检测来源请求头中的Referer</p>
+<p>常见waf绕过：</p>
+<p>标签语法替换</p>
+<p>特殊符号干扰</p>
+<p>提交方式更改</p>
+<p>垃圾数据溢出</p>
+<p>加密解密算法</p>
+<p>结合其他漏洞绕过</p>
+<p>poc 验证漏洞是否存在</p>
+<p>exp利用漏洞</p>
+<h2 id="逻辑越权"><a href="#逻辑越权" class="headerlink" title="逻辑越权"></a>逻辑越权</h2><h3 id="水平越权"><a href="#水平越权" class="headerlink" title="水平越权"></a>水平越权</h3><p>同级别用户权限跨越：</p>
+<p>通过更换某个ID身份标识，从而通过A用户获取(修改，删除)B用户数据</p>
+<p>即用普通用户A，访问普B，或者普C,普D</p>
+<h3 id="垂直越权"><a href="#垂直越权" class="headerlink" title="垂直越权"></a>垂直越权</h3><p>使用低权限用户的身份，发送高权限用户才能发送的请求，获得其高权限的操作</p>
+<hr>
+<p>title: 小迪<br>date: 2021-09-15 21:27:13<br>tags:</p>
+<hr>
+<details>
+
+<h3 id="未授权访问"><a href="#未授权访问" class="headerlink" title="未授权访问"></a>未授权访问</h3><p>通过删除请求中的认证信息后再发送，依旧可以访问或完成操作</p>
+<p>接口安全</p>
+<p><img src="C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20210924165936101.png" alt="image-20210924165936101"></p>
+<p>burp抓取响应包</p>
+<p><img src="C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20210924191832995.png" alt="image-20210924191832995"></p>
+<p>waf   web防火墙</p>
+<p>大部分waf都使用的是正则表达式规则</p>
+<p>工具安装:</p>
+<p>​    冰蝎</p>
+<p>​    fortify</p>
+<p>​    phpstome</p>
+<p>​    xdebug</p>
+<p>​    WSExplorer   进程抓包工具</p>
+<p>​    wireshark</p>
+</details>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
